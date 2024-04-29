@@ -1,4 +1,4 @@
-import 'package:diabetes_safety/core/utile/show_message.dart';
+import 'package:diabetes_safety/core/utile/shared/show_message.dart';
 import 'package:diabetes_safety/cubit/bmi_cubit/bmi_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

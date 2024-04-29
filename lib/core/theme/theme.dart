@@ -25,7 +25,6 @@ ThemeData lightTheme = ThemeData(
     cardTheme: cardTheme,
     cardColor: AppPalette.cardColorLight,
     elevatedButtonTheme: elevatedButtonTheme,
-
     // floatingActionButtonTheme: const FloatingActionButtonThemeData(backgroundColor: AppPalette.primaryButtonColorLight),
     dialogBackgroundColor: AppPalette.backgroundColorLight,
     textTheme: const TextTheme(
