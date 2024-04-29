@@ -40,4 +40,20 @@ class AuthProvider {
       throw e.toString();
     }
   }
+
+  Future<Response> getUser({
+    required String token,
+  }) async {
+    try {
+      final Response response = await http.get(
+        Uri.parse(AppEndPoints.profile),
+        headers: {
+          "Authorization": 'Bearer $token',
+        },
+      );
+      return response;
+    } catch (e) {
+      throw e.toString();
+    }
+  }
 }

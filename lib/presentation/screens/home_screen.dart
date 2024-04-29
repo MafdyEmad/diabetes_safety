@@ -1,4 +1,5 @@
 import 'package:diabetes_safety/models/option_model.dart';
+import 'package:diabetes_safety/models/profile.dart';
 import 'package:diabetes_safety/presentation/screens/add_alarm_screen.dart';
 import 'package:diabetes_safety/presentation/screens/bmi_screen.dart';
 import 'package:diabetes_safety/presentation/screens/effects_screen.dart';
@@ -7,10 +8,9 @@ import 'package:diabetes_safety/presentation/screens/food_screen.dart';
 import 'package:diabetes_safety/presentation/screens/protection_screen.dart';
 import 'package:diabetes_safety/presentation/screens/sugar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  HomeScreen({super.key, required this.profile});
   final List<Option> listFirstOptions = [
     Option(title: 'قياس السكر', image: 'assets/sugar.png'),
     Option(title: 'الأطعمة الصحية', image: 'assets/food.png'),
@@ -22,6 +22,7 @@ class HomeScreen extends StatelessWidget {
     Option(title: 'أعراض واثار مرض السكر', image: 'assets/effects.png'),
     Option(title: 'مزيد من المعلومات حول الوقاية من مرض السكر', image: 'assets/pill.png'),
   ];
+  final Profile profile;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Center(
               child: Text(
-                'مرحبا بك Alaa',
+                'مرحبا بك ${profile.name}',
                 style: Theme.of(context).textTheme.displayLarge,
               ),
             ),

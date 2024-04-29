@@ -6,6 +6,7 @@ import 'package:diabetes_safety/cubit/expect/expect_cubit.dart';
 import 'package:diabetes_safety/cubit/main_cubit/main_cubit.dart';
 import 'package:diabetes_safety/cubit/sugar_cubit/sugar_cubit.dart';
 import 'package:diabetes_safety/data/data_provider/aut_provider.dart';
+import 'package:diabetes_safety/data/data_provider/predict_provider.dart';
 import 'package:diabetes_safety/data/repository/database.dart';
 import 'package:diabetes_safety/presentation/screens/first_screen.dart';
 import 'package:diabetes_safety/presentation/screens/main_screen.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => MainCubit(),
+          create: (context) => MainCubit(AuthProvider()),
         ),
         BlocProvider(
           create: (context) => BmiCubit(),
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
           create: (context) => SugarCubit(),
         ),
         BlocProvider(
-          create: (context) => ExpectCubit(),
+          create: (context) => ExpectCubit(PredictionProvider()),
         ),
         BlocProvider(
           create: (context) => AuthCubit(AuthProvider()),
@@ -62,7 +63,7 @@ class MyApp extends StatelessWidget {
             Locale("ar"),
           ],
           theme: Database.database.getBool('isDark') == true ? darkTheme : lightTheme,
-          home: Database.database.getString('token') == null ? const FirstScreen() : MainScreen(),
+          home: Database.database.getString('token') != null ? const FirstScreen() : MainScreen(),
         ),
       ),
     );

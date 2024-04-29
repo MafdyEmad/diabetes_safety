@@ -4,11 +4,13 @@ import 'package:flutter/services.dart';
 class ExpectTextFiled extends StatelessWidget {
   final bool isDecimal;
   final String hintText;
-  const ExpectTextFiled({super.key, this.isDecimal = true, required this.hintText});
+  final TextEditingController controller;
+  const ExpectTextFiled({super.key, this.isDecimal = true, required this.hintText, required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       keyboardType: TextInputType.number,
       inputFormatters: isDecimal
           ? <TextInputFormatter>[
