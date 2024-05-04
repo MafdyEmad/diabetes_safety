@@ -21,6 +21,7 @@ ThemeData lightTheme = ThemeData(
       elevation: 0,
       iconTheme: IconThemeData(color: AppPalette.drawerIconColorLight),
     ),
+    snackBarTheme: const SnackBarThemeData(backgroundColor: AppPalette.cardColorLight),
     drawerTheme: const DrawerThemeData(backgroundColor: AppPalette.cardColorLight),
     cardTheme: cardTheme,
     cardColor: AppPalette.cardColorLight,
@@ -50,6 +51,7 @@ ThemeData darkTheme = ThemeData(
     cardTheme: cardTheme,
     cardColor: AppPalette.cardColorDark,
     elevatedButtonTheme: elevatedButtonTheme,
+    snackBarTheme: const SnackBarThemeData(backgroundColor: AppPalette.cardColorDark),
     // floatingActionButtonTheme: const FloatingActionButtonThemeData(backgroundColor: AppPalette.primaryButtonColorLight),
     textTheme: const TextTheme(
       displayLarge: TextStyle(fontSize: 24, color: AppPalette.primaryTextColorDark),

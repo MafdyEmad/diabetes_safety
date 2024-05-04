@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:diabetes_safety/data/data_provider/predict_provider.dart';
 import 'package:flutter/cupertino.dart';
 
 part 'sugar_state.dart';

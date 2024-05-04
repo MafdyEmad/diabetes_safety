@@ -1,7 +1,10 @@
 class AppEndPoints {
-  static const String api = 'https://1cf8-197-54-131-182.ngrok-free.app/';
+  static const String api = 'https://af4b-197-53-108-116.ngrok-free.app/';
   static const String register = '${api}api/users/register/';
   static const String login = '${api}api/users/login/';
   static const String profile = '${api}api/users/profile/';
   static const String predict = '${api}api/prediction/predict/';
+  static const String getReminders = '${api}api/reminder/';
+  static const String addReminder = '${api}api/reminder/create/';
+  static const String deleteReminder = '${api}api/reminder/delete/';
 }

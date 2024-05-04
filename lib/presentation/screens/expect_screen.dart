@@ -1,13 +1,8 @@
-import 'dart:ffi';
-
 import 'package:diabetes_safety/core/theme/palette.dart';
 import 'package:diabetes_safety/core/utile/shared/loading.dart';
 import 'package:diabetes_safety/core/utile/shared/show_message.dart';
 import 'package:diabetes_safety/cubit/expect/expect_cubit.dart';
-import 'package:diabetes_safety/cubit/main_cubit/main_cubit.dart';
-import 'package:diabetes_safety/cubit/sugar_cubit/sugar_cubit.dart';
 import 'package:diabetes_safety/data/repository/database.dart';
-import 'package:diabetes_safety/presentation/screens/sugar.dart';
 import 'package:diabetes_safety/presentation/widgets/expect_card.dart';
 import 'package:diabetes_safety/presentation/widgets/expect_text_filed.dart';
 import 'package:flutter/material.dart';
