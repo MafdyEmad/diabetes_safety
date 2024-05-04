@@ -7,4 +7,7 @@ class AppEndPoints {
   static const String getReminders = '${api}api/reminder/';
   static const String addReminder = '${api}api/reminder/create/';
   static const String deleteReminder = '${api}api/reminder/delete/';
+  static const String getSugars = '${api}api/sugar/';
+  static const String addSugar = '${api}api/sugar/create/';
+  static const String deleteSugar = '${api}api/sugar/delete/';
 }

@@ -9,6 +9,7 @@ import 'package:diabetes_safety/cubit/sugar_cubit/sugar_cubit.dart';
 import 'package:diabetes_safety/data/data_provider/aut_provider.dart';
 import 'package:diabetes_safety/data/data_provider/predict_provider.dart';
 import 'package:diabetes_safety/data/data_provider/reminder_provider.dart';
+import 'package:diabetes_safety/data/data_provider/sugar_provider.dart';
 import 'package:diabetes_safety/data/repository/database.dart';
 import 'package:diabetes_safety/models/reminder.dart';
 import 'package:diabetes_safety/presentation/screens/first_screen.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
           create: (context) => BmiCubit(),
         ),
         BlocProvider(
-          create: (context) => SugarCubit(),
+          create: (context) => SugarCubit(SugarProvider()),
         ),
         BlocProvider(
           create: (context) => ExpectCubit(PredictionProvider()),
@@ -69,7 +70,7 @@ class MyApp extends StatelessWidget {
             Locale("ar"),
           ],
           theme: Database.database.getBool('isDark') == true ? darkTheme : lightTheme,
-          home: Database.database.getString('token') != null ? const FirstScreen() : MainScreen(),
+          home: Database.database.getString('token') == null ? const FirstScreen() : MainScreen(),
         ),
       ),
     );

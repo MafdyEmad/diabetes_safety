@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const Sugar(),
+                          builder: (context) => const SugarScreen(),
                         ),
                       );
                       break;
